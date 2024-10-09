@@ -1,5 +1,6 @@
 my_dict = {'Wine': 75, 'Mozzarella': 89, 'roll': 65}
 print(my_dict)
+print(my_dict.get('Vanda', 'Такого ключа нет'))
 my_dict['chocolate'] = 95
 print(my_dict['Wine'])
 print(my_dict['chocolate'])
