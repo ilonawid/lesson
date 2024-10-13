@@ -14,3 +14,4 @@ for i in numbers:
 primes.remove(1)
 print('Простые чилса: ', primes)
 print('Непростые числа: ', not_primes)
+print(5)
