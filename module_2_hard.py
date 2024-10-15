@@ -1,7 +1,8 @@
 import random
 
+
 def gates():
-    numbers = [3, 4 ,5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    numbers = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     n = random.choice(numbers)
     numbers_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     key = [n, ' ']
@@ -16,6 +17,7 @@ def gates():
                     continue
         numbers.remove(n)
     return key
+
+
 key = ''.join(str(item) for item in gates())
 print(key)
-
