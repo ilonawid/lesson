@@ -6,28 +6,29 @@ def count_calls():
     calls = int(calls) + 1
     return calls
 
-
-string = input('Введите строку ')
-tuple_ = tuple((len(string), string.upper(), string.lower()))
-list_ = list(input('Введите список '))
+def is_contains(string, list_to_search):
+    count_calls()
+    return string.upper() in [string.upper() for string in list_to_search]
 
 
 def string_info(string):
-    print(tuple_)
+    a = string
+    tuple_ = (len(a), a.upper(), a.lower())
     count_calls()
     return tuple_
 
 
-def is_contains(string, list_):
-    if string in list_:
-        print(True)
-    else:
-        print(False)
-    count_calls()
-    return
+print(string_info('Capybara'))
 
+print(string_info('Armageddon'))
 
-string_info(string)
-is_contains(string, list_)
-calls = count_calls() - 1
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
+
+print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
+
 print(calls)
+
+#string_info(string)
+#is_contains(string, list_)
+#calls = count_calls() - 1
+#print(calls)
