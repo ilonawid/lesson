@@ -1,4 +1,3 @@
-
 class House:
     def __init__(self, name, number_of_floors):
         self.name = name
@@ -23,7 +22,7 @@ class House:
     def __eq__(self, other):
         isinstance(other, House)
         isinstance(self, int)
-        if self.number_of_floors == other:#.number_of_floors:
+        if self.number_of_floors == other:  # .number_of_floors:
             return True
         else:
             return False
@@ -44,22 +43,17 @@ class House:
         return self.number_of_floors != other.number_of_floors
 
     def __add__(self, value):
-        isinstance(value, House)
-        isinstance(self, int)
-        self.number_of_floors= self.number_of_floors + value
-        return  self
-
-    def __radd__(self, value):
-        isinstance(value, House)
-        isinstance(self, int)
-        self.number_of_floors = self.number_of_floors + value
-        return  self
-
-    def __iadd__(self, value):
-        isinstance(value, House)
-        isinstance(self, int)
         self.number_of_floors = self.number_of_floors + value
         return self
+
+    def __radd__(self, value):
+        self.number_of_floors = self.number_of_floors + value
+        return self
+
+    def __iadd__(self, value):
+        self.number_of_floors = self.number_of_floors + value
+        return self
+
 
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
