@@ -74,4 +74,5 @@ print(House.houses_history)
 del h2
 del h3
 
+
 print(House.houses_history)
