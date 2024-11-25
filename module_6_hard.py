@@ -38,7 +38,6 @@ class Figure:
         res = []
         for i in range(0, self.sides_count):
             res.append(self.__sides)
-
         return res
 
     def __len__(self):
