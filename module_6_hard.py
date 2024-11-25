@@ -1,6 +1,7 @@
 class Figure:
     sides_count = 0
 
+
     def __init__(self, color, sides):
         self.__sides = sides
         self.__color = color
