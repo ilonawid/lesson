@@ -27,7 +27,6 @@ class Figure:
             self.__color = list(self.__color)
         return self.__color
 
-
     def __is_valid_sides(self, *sides):
         for side in sides:
             if side > 0 and len(sides) == self.__sides:
@@ -38,8 +37,8 @@ class Figure:
     def get_sides(self):
         res = []
         for i in range(0, self.sides_count):
-         res.append(self.__sides)
-        return  res
+            res.append(self.__sides)
+        return res
 
     def __len__(self):
         return self.__sides
