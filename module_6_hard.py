@@ -1,4 +1,3 @@
-#Попытка 647353473834....
 class Figure:
     sides_count = 0
 
