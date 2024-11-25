@@ -10,7 +10,6 @@ class Figure:
         return self.__color
 
     def __is_valid_color(self, color):
-        # print(len(color))
         c = 0
         for i in color:
             if 0 < i < 255:
@@ -37,8 +36,10 @@ class Figure:
                 return False
 
     def get_sides(self):
-        res = [self.__sides, self.__sides, self.__sides]
-        return res
+        res = []
+        for i in range(0, self.sides_count):
+         res.append(self.__sides)
+        return  res
 
     def __len__(self):
         return self.__sides
