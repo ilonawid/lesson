@@ -5,7 +5,7 @@ class Figure:
     def __init__(self, color, sides):
         self.__sides = sides
         self.__color = color
-        self.filled = bool
+        self.filled = False
 
     def get_color(self):
         return self.__color
