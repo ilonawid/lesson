@@ -5,7 +5,7 @@ class Figure:
     def __init__(self, color, sides):
         self.__sides = sides
         self.__color = color
-        self.filled = False
+        self.filled = True
 
     def get_color(self):
         return self.__color
@@ -56,7 +56,6 @@ class Circle(Figure):
     def __init__(self, color, sides):
         super().__init__(color, sides)
         self.radius = sides // (2 * 3.1415)
-        # _Figure__color = color
 
     def get_square(self):
         square = 3.1405 * self.radius ** 2
