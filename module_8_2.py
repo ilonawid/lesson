@@ -1,13 +1,13 @@
 def personal_sum(numbers):
-    global x
+    global true_numbers
     result = 0
     incorrect_data = 0
     try:
-        x = 0
+        true_numbers = 0
         for number in numbers:
             try:
                 result += number
-                x += 1
+                true_numbers += 1
             except TypeError:
                 print(f'Некорректный тип данных для подсчёта суммы {number}')
                 incorrect_data += 1
@@ -20,7 +20,7 @@ def personal_sum(numbers):
 def calculate_average(numbers):
     sum = personal_sum(numbers)
     try:
-        result = sum[0] / x
+        result = sum[0] / true_numbers
         return result
     except ZeroDivisionError:
         return 0
