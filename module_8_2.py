@@ -26,7 +26,6 @@ def calculate_average(numbers):
         return 0
     except TypeError:
         print('В numbers записан некорректный тип данных')
-        return None
 
 
 print(f'Результат 1: {calculate_average('1, 2, 3')}')  # Строка перебирается, но каждый символ - строковый тип
