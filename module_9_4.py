@@ -14,7 +14,7 @@ def get_advanced_writer(file_name):
 
     def write_everything(*data_set):
         for i in data_set:
-            file.write(f'{i}')
+            file.write(f'{i}\n')
 
     return write_everything
 
