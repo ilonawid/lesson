@@ -17,8 +17,6 @@ class Iterator():
 
     def __next__(self):
         self.pointer += self.step
-        # if self.pointer == self.start:
-        #     return self.start
         if self.step > 0:
             if self.pointer <= self.stop:
                 return self.pointer
