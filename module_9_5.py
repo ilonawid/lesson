@@ -7,7 +7,7 @@ class Iterator():
         self.start = start  # - целое число, с которого начинается итерация.
         self.stop = stop  # - целое число, на котором заканчивается итерация.
         self.step = step  # шаг, с которым совершается итерация.
-        self.pointer = self.start  # указывает на текущее число в итерации (изначально start)
+        self.pointer = start  # указывает на текущее число в итерации (изначально start)
         if self.step == 0:
             raise StepValueError('шаг не может быть равен 0')
 
@@ -17,10 +17,12 @@ class Iterator():
 
     def __next__(self):
         self.pointer += self.step
+        # if self.pointer == self.start:
+        #     return self.start
         if self.step > 0:
             if self.pointer <= self.stop:
                 return self.pointer
-        else:
+        if self.step < 0:
             if self.pointer >= self.stop:
                 return self.pointer
         raise StopIteration()
