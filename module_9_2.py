@@ -7,6 +7,7 @@ second_result = [(string_1, string_2) for string_1 in first_strings for string_2
 
 third_result = {string: len(string) for string in first_strings + second_strings if len(string) % 2 == False}
 
+
 print(first_result)
 print(second_result)
 print(third_result)
