@@ -1,13 +1,14 @@
-from time import sleep
+from time import sleep, thread_time
 from time import time
 import threading
 
 
+
 def wite_words(word_count, file_name):
-    with open(file_name, 'a', encoding='utf-8') as name:
+    with open(file_name, 'w', encoding='utf-8') as name:
         for number in range(1, word_count + 1):
             name.write(f'Какое-то слово № {number}\n')
-            sleep(0.1)
+            sleep(0.01)
         print(f'Завершилась запись в файл {file_name}')
 
 
